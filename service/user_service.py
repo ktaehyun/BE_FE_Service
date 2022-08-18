@@ -6,6 +6,6 @@ class UserService:
         self.user_dao = user_dao
         self.config = config
 
-    def create_new_user(self, new_user):
-        user = self.user_dao.insert_user(new_user)
-        return user
+    def retrieve_car_plate(self):
+        car_plate = self.user_dao.get_CarPlate()
+        return car_plate
