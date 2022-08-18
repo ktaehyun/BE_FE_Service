@@ -18,12 +18,7 @@ def create_app(test_config=None):
     else:
         app.config.update(test_config)
 
-    database = pymysql.connect(host='localhost',
-                               user='root',
-                               password='',
-                               db='brandi',
-                               charset='utf8'
-                               )
+    database = pymysql.connect()
 
     user_dao = UserDao(database)
 
